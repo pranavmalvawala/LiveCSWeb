@@ -1,30 +1,29 @@
 import React from "react";
-import "./Home.css";
+import "./Chums.css";
 import { Footer, Header } from "./components"
-import { HomeRegister } from "./components/HomeRegister"
-import { HomeHero } from "./components/HomeHero"
-import { HomeAbout } from "./components/HomeAbout"
-import { HomeFeatures } from "./components/HomeFeatures"
-import { HomeMembers } from "./components/HomeMembers";
-import { HomeGiving } from "./components/HomeGiving";
-import { HomeAttendance } from "./components/HomeAttendance";
-import { HomeExport } from "./components/HomeExport";
-import { HomeTestimony } from "./components/HomeTestimony";
+import { ChumsRegister } from "./components/ChumsRegister"
+import { ChumsHero } from "./components/ChumsHero"
+import { ChumsAbout } from "./components/ChumsAbout"
+import { ChumsFeatures } from "./components/ChumsFeatures"
+import { ChumsMembers } from "./components/ChumsMembers";
+import { ChumsGiving } from "./components/ChumsGiving";
+import { ChumsAttendance } from "./components/ChumsAttendance";
+import { ChumsExport } from "./components/ChumsExport";
+import { ChumsTestimony } from "./components/ChumsTestimony";
 
-export const Home = () => {
+export const ChumsLanding = () => {
     return (
         <>
             <Header />
-            <HomeHero />
-            <HomeAbout />
-            <HomeFeatures />
-            <HomeMembers />
-            <HomeGiving />
-            <HomeAttendance />
-            <HomeExport />
-            <HomeTestimony />
-
-            <HomeRegister />
+            <ChumsHero />
+            <ChumsAbout />
+            <ChumsFeatures />
+            <ChumsMembers />
+            <ChumsGiving />
+            <ChumsAttendance />
+            <ChumsExport />
+            <ChumsTestimony />
+            <ChumsRegister />
             <Footer />
         </>
     );

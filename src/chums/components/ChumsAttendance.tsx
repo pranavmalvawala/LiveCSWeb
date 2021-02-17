@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap"
 
-export const HomeAttendance: React.FC = () => {
+export const ChumsAttendance: React.FC = () => {
     return (
         <div className="homeSection alt" id="attendanceSection">
             <Container>
@@ -18,7 +18,7 @@ export const HomeAttendance: React.FC = () => {
                             <li>All check-in information is automatically entered into the attendance system, freeing up time that your office staff would otherwise spend having to manually track attendance.</li>
                         </ul>
                     </Col>
-                    <Col lg={6}><img src="/images/home/checkin.png" alt="check in" className="img-fluid" /></Col>
+                    <Col lg={6}><img src="/images/chums/checkin.png" alt="check in" className="img-fluid" /></Col>
                 </Row>
             </Container>
         </div >

@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap"
 
-export const HomeMembers: React.FC = () => {
+export const ChumsMembers: React.FC = () => {
     return (
         <div className="homeSection alt" id="membersSection">
             <Container>
@@ -16,7 +16,7 @@ export const HomeMembers: React.FC = () => {
                             <li>You can also track attendance on each of these groups, if you choose and see reports showing how your groups are growing over time.</li>
                         </ul>
                     </Col>
-                    <Col lg={6}><img src="/images/home/members.png" alt="Members" className="img-fluid" /></Col>
+                    <Col lg={6}><img src="/images/chums/members.png" alt="Members" className="img-fluid" /></Col>
                 </Row>
             </Container>
         </div >

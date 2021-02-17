@@ -5,8 +5,8 @@ h2 span {color:#24b8ff;}
 .blue{color:#03a9f4;}
 .green {color:#00ad25;}
 
-#navbar {background-color: #FFF !important;height:55px;margin-bottom: 20px;box-shadow: 0px 3px 3px 0px #999;}
-#navbar a.link {color:#000;font-size:14px;font-weight: bold;}
+#navbar {background-color: #000 !important;margin-bottom: 20px;}
+#navbar a.link {color:#FFF;font-size:20px;font-weight: bold;}
 #navbar .nav-item {font-size:14px;}
 #navbar .nav-link {color:#555;height:55px;vertical-align: middle;line-height: 45px; max-width:150px; margin-left:auto; margin-right:auto;}
 #navbar .active {border-bottom: 2px solid #03a9f4;}
@@ -15,6 +15,13 @@ h2 span {color:#24b8ff;}
 #navRight {white-space: nowrap; overflow: hidden; padding-top: 15px;}
 #navRight a {margin-left:20px;font-size:30px;}
 #navSpacer {height:57px;}
+
+#homeNavbar {padding-bottom: 10px;padding-top:10px;}
+#homeNavbar a.link {color:#FFF;font-size:20px;font-weight: bold;}
+#homeNavbar .nav-item {font-size:14px;}
+#homeNavbar .nav-link {color:#555;height:55px;vertical-align: middle;line-height: 45px; max-width:150px; margin-left:auto; margin-right:auto;}
+#homeNavbar .active {border-bottom: 2px solid #03a9f4;}
+#homeNavbar.scrolled { background-color: #000 !important; transition: background-color 200ms linear;}
 
 #footer {background-color:#222222; padding-top:40px; padding-bottom: 40px; color:#EEE;border-top:5px solid #03A8F4;}
 #footer img {max-width:450px;margin-bottom: 10px;}
@@ -33,15 +40,7 @@ h2 span {color:#24b8ff;}
 #homeHero h1 {font-size:3.75rem;}
 #homeHero p {font-size:1.5rem;}
 
-#homeNavbar {padding-bottom: 10px;padding-top:10px;}
-#homeNavbar a.link {color:#FFF;font-size:20px;font-weight: bold;}
-#homeNavbar .nav-item {font-size:14px;}
-#homeNavbar .nav-link {color:#555;height:55px;vertical-align: middle;line-height: 45px; max-width:150px; margin-left:auto; margin-right:auto;}
-#homeNavbar .active {border-bottom: 2px solid #03a9f4;}
-#homeNavbar.scrolled {
-    background-color: #000 !important;
-    transition: background-color 200ms linear;
-  }
+
 
 #homeServices { margin-top:-200px; margin-bottom: 100px; }
 #homeServices .rounded-circle {width:100px;height:100px;margin-left:auto;margin-right:auto;color:#FFF;text-align: center; vertical-align: middle;}
@@ -56,42 +55,6 @@ h2 span {color:#24b8ff;}
 .homeSection h2 {margin-bottom: 30px; font-size:36px; font-weight: bold; }
 .homeSection ul {padding-left:0px;}
 .homeSection li {list-style: none; background: url('/images/home/checkbox.png') 0px 3px no-repeat; padding:0px 0px 15px 37px;}
-
-#hero h1 {font-weight: bold;}
-#hero h1 span {color:#03a9f4;font-style: italic;font-weight: normal;}
-#hero {padding-top:50px;padding-bottom: 50px;}
-
-#aboutSection { background-image: url('/images/home/about-bg.jpg'); background-position: center center; background-size: cover; }
-#aboutSection p {color:#b4c5ce;line-height: 30px;}
-#aboutSection b {color:#FFF;}
-#aboutSection .btn {padding-left:20px;padding-right: 20px;}
-
-.homeFeature { padding:10px;box-shadow: 0px 2px 5px  #CCC; margin-bottom: 25px; min-height: 200px; border-radius: 10px;}
-.homeFeature .icon {margin-top:5px; margin-bottom: 5px;}
-.homeFeature .icon span { border:3px solid #03a9f4; border-radius: 50%;display: inline-block;width:60px;height:60px; }
-.homeFeature .icon i { color:#00ad25; font-size: 25px; line-height: 55px; }
-.homeFeature .feature {font-weight: bold;}
-
-#membersSection { background-image: url('/images/home/members-bg.jpg'); background-position: center center; background-size: cover; }
-#membersSection img {margin-top:20px;}
-#membersSection li {color:#DDD;}
-
-#givingSection .title {margin-top:30px;}
-#testimonySection { background-image: url('/images/home/testimony-bg.jpg'); background-position: center center; background-size: cover; }
-
-#registerSection h2 {margin-bottom: 10px;}
-
-
-#attendanceSection { background-image: url('/images/home/members-bg.jpg'); background-position: center center; background-size: cover; }
-
-
-/*
-#membersSection p {color:#b4c5ce;line-height: 30px;}
-#membersSection b {color:#FFF;}
-#membersSection .btn {padding-left:20px;padding-right: 20px;}
-*/
-
-
 
 
 
@@ -109,21 +72,3 @@ p.lead {font-size:16px;font-weight: bold;}
 
 
 
-
-
-
-
-#attendance {position: relative; z-index:-2}
-#attendance:after { content:''; background-position-y: center; background-image: url(/images/home/attendance.jpg); background-size: cover; opacity: 0.10; top: 0;left: 0;bottom: 0;right: 0;position: absolute; z-index: -1; } /*https://pixabay.com/photos/kindergarten-clown-garden-animator-2204239/*/
-
-
-
-
-@media (min-width: 600px) {
-    #navRight .btn:after {content:' for Free';}
-}
-
-
-@media (min-width: 1200px) {
-    .col-lg-2-5 {flex: 0 0 20.8%; max-width: 20.8%; position: relative; width:100%; padding-left:15px;padding-right: 15px;}
-}

@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap"
 
-export const HomeExport: React.FC = () => {
+export const ChumsExport: React.FC = () => {
     return (
         <div className="homeSection" id="exportSection">
             <Container>
@@ -15,7 +15,7 @@ export const HomeExport: React.FC = () => {
                         </ul>
                     </Col>
                     <Col lg={{ span: 6, order: 1 }}>
-                        <Col><img src="/images/home/export.png" alt="import and export" className="img-fluid" /></Col>
+                        <Col><img src="/images/chums/export.png" alt="import and export" className="img-fluid" /></Col>
                     </Col>
                 </Row>
             </Container>

@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap"
 
-export const HomeAbout: React.FC = () => {
+export const ChumsAbout: React.FC = () => {
     return (
         <div className="homeSection alt" id="aboutSection">
             <Container>

@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap"
 
-export const HomeGiving: React.FC = () => {
+export const ChumsGiving: React.FC = () => {
     return (
         <div className="homeSection" id="givingSection">
             <Container>
@@ -16,7 +16,7 @@ export const HomeGiving: React.FC = () => {
                             <li>Create an unlimited number of funds to track gifts to special causes and view breakdwons of giving over time, either by fund or see the big picture.</li>
                         </ul>
                     </Col>
-                    <Col lg={{ span: 6, order: 1 }} ><img src="/images/home/giving.png" alt="giving" className="img-fluid" /></Col>
+                    <Col lg={{ span: 6, order: 1 }} ><img src="/images/chums/giving.png" alt="giving" className="img-fluid" /></Col>
                 </Row>
             </Container>
         </div >

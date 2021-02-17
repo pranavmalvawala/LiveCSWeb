@@ -14,7 +14,7 @@ export const HomeServices: React.FC = () => {
                                         <div className="rounded-circle bg-info"><i className="fas fa-play"></i></div>
                                         <h4>Free Streaming</h4>
                                         <p>StreamingLive provides a means for your church congregation to gather at set times to worship, connect and grow together during your church service via live streaming.</p>
-                                        <a href="http://chums.org/" className="btn btn-info">Learn More</a>
+                                        <a href="/chums" className="btn btn-info">Learn More</a>
                                     </Col>
                                     <Col style={{ borderRight: "1px solid #CCC" }}>
                                         <div className="rounded-circle bg-primary"><i className="fas fa-cloud"></i></div>
