@@ -10,8 +10,8 @@ export const HomeNav: React.FC = () => {
                     <div className="col-4"><a className="navbar-brand" href="/"><img src="/images/logo.png" alt="logo" /></a></div>
                     <div className="col-8 text-right" id="navRight" >
                         <a href="/" className="link">About Us</a>
-                        <a href="/" className="link">Solutions</a>
-                        <a href="/" className="link">Partner</a>
+                        <a href="/solutions" className="link">Solutions</a>
+                        <a href="/partner" className="link">Partner</a>
                     </div>
                 </Row>
             </Container>

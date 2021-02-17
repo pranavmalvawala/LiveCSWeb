@@ -1,6 +1,6 @@
 import React from "react";
 import "./Home.css";
-import { Footer, Header } from "./components"
+import { Footer } from "./components"
 import { HomeNav } from "./components/HomeNav"
 import { HomeHero } from "./components/HomeHero"
 import { HomeServices } from "./components/HomeServices"
