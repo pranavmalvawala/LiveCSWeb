@@ -6,6 +6,10 @@ export class EnvironmentHelper {
     private static GivingApi = "";
     private static MembershipApi = "";
     static AppUrl = "";
+
+    private static StreamingLiveApi = "";
+    static SubUrl = "";
+
     static GoogleAnalyticsTag = "";
 
     static init = () => {
@@ -19,6 +23,7 @@ export class EnvironmentHelper {
             { keyName: "AttendanceApi", url: EnvironmentHelper.AttendanceApi, jwt: "", permisssions: [] },
             { keyName: "GivingApi", url: EnvironmentHelper.GivingApi, jwt: "", permisssions: [] },
             { keyName: "MembershipApi", url: EnvironmentHelper.MembershipApi, jwt: "", permisssions: [] },
+            { keyName: "StreamingLiveApi", url: EnvironmentHelper.StreamingLiveApi, jwt: "", permisssions: [] },
         ];
     }
 
@@ -29,6 +34,8 @@ export class EnvironmentHelper {
         EnvironmentHelper.MembershipApi = process.env.REACT_APP_MEMBERSHIP_API || "";
         EnvironmentHelper.GoogleAnalyticsTag = process.env.REACT_APP_GOOGLE_ANALYTICS || "";
         EnvironmentHelper.AppUrl = process.env.REACT_APP_APP_URL || ""
+        EnvironmentHelper.StreamingLiveApi = process.env.REACT_APP_STREAMINGLIVE_API || "";
+        EnvironmentHelper.SubUrl = process.env.REACT_APP_SUB_URL;
     }
 
     //NOTE: None of these values are secret.
@@ -40,6 +47,8 @@ export class EnvironmentHelper {
         EnvironmentHelper.AppUrl = "https://app.staging.chums.org"
         EnvironmentHelper.GoogleAnalyticsTag = "";
         EnvironmentHelper.AppUrl = "https://app.staging.chums.org"
+        EnvironmentHelper.StreamingLiveApi = "https://api.staging.streaminglive.church";
+        EnvironmentHelper.SubUrl = "https://{key}.staging.streaminglive.church";
     }
 
     //NOTE: None of these values are secret.
@@ -51,6 +60,8 @@ export class EnvironmentHelper {
         EnvironmentHelper.AppUrl = "https://app.chums.org"
         EnvironmentHelper.GoogleAnalyticsTag = "UA-164774603-4";
         EnvironmentHelper.AppUrl = "https://app.chums.org"
+        EnvironmentHelper.StreamingLiveApi = "https://api.streaminglive.church";
+        EnvironmentHelper.SubUrl = "https://{key}.streaminglive.church";
     }
 
 }
