@@ -1,6 +1,6 @@
 
 import React from "react"
-import { Row, Col, Container } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import YoutubeBackground from 'react-youtube-background'
 
 export const HomeHero: React.FC = () => {
@@ -9,7 +9,7 @@ export const HomeHero: React.FC = () => {
     //width: 2281px; max-width: 2281px; height: 1283px; opacity: 1; left: -190px;
     //const youtubeUrl = "https://www.youtube.com/embed/3iXYciBTQ0c?autoplay=1&amp;controls=0&amp;disablekb=1&amp;fs=0&amp;iv_load_policy=3&amp;loop=1&amp;modestbranding=1&amp;playsinline=1&amp;rel=0&amp;showinfo=0&amp;enablejsapi=1&amp;origin=https%3A%2F%2Flivecs.org&amp;widgetid=1";
     return (
-        <div style={{ marginTop: -60 }}>
+        <div style={{ marginTop: -97 }}>
             <YoutubeBackground videoId="3iXYciBTQ0c" overlay="rgba(0,0,0,.4)">
                 <div id="homeHero">
                     <Container className="text-center">

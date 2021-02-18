@@ -1,13 +1,12 @@
 import React from "react";
 import "./App.css";
 import { Home } from "./Home";
-import { Privacy } from "./Privacy";
-import { Terms } from "./Terms";
 import { Switch, Route, useLocation } from "react-router-dom";
 import ReactGA from "react-ga";
 import { EnvironmentHelper } from "./helpers";
 import { ChumsLanding } from "./chums/ChumsLanding";
 import { SolutionsPage } from "./solutions/SolutionsPage";
+import { PartnerPage } from "./partner/PartnerPage";
 
 export const Routing: React.FC = () => {
   const location = useLocation();
@@ -20,6 +19,7 @@ export const Routing: React.FC = () => {
   return (
     <Switch>
       <Route path="/solutions"><SolutionsPage /></Route>
+      <Route path="/partner"><PartnerPage /></Route>
       <Route path="/chums"><ChumsLanding /></Route>
       <Route path="/"><Home /></Route>
 

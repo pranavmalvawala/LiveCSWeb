@@ -21,7 +21,7 @@ export const Footer: React.FC = () => {
                                 <i className="far fa-envelope"></i> &nbsp; <a href="mailto:%20micheal@livechurchsolutions.org">micheal@livecs.org</a>
                             </p>
                             <p>
-                                <i className="fas fa-phone"></i> &nbsp; <a href="tel:+19189942638" target="_blank" rel="noopener">(918) 994-2638</a>
+                                <i className="fas fa-phone"></i> &nbsp; <a href="tel:+19189942638" target="_blank" rel="noopener noreferrer">(918) 994-2638</a>
                             </p>
                         </Col>
                         <Col>
@@ -29,8 +29,8 @@ export const Footer: React.FC = () => {
                             <p>Live Church Solutions is a 501(c)(3) organization with EIN 45-5349618</p>
                         </Col>
                         <Col>
-                            <img src="/images/logo-footer.png" />
-                            <a href="https://www.facebook.com/livecsolutions" target="_blank"><i className="fab fa-facebook-f" style={{ fontSize: 20, color: "#FFF" }}></i></a>
+                            <img src="/images/logo-footer.png" alt="logo" />
+                            <a href="https://www.facebook.com/livecsolutions" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f" style={{ fontSize: 20, color: "#FFF" }}></i></a>
                         </Col>
                     </Row>
 
