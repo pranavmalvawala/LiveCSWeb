@@ -1,6 +1,7 @@
 import React from "react";
 import { ApiHelper, RegisterInterface, LoginResponseInterface, ErrorMessages, EnvironmentHelper } from ".";
 import { Row, Col, Container, Button } from "react-bootstrap"
+import ReactGA from "react-ga";
 
 export const ChumsRegister: React.FC = () => {
 
@@ -34,6 +35,7 @@ export const ChumsRegister: React.FC = () => {
         if (validate()) {
             setProcessing(true);
             btn.innerHTML = "Registering. Please wait...";
+            ReactGA.event({ category: 'Chums', action: 'Register' });
             const loginResp = await createAccess();
             if (loginResp != null) {
                 btn.innerHTML = "Configuring...";

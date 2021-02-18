@@ -1,7 +1,12 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap"
+import ReactGA from "react-ga";
 
 export const GetStarted: React.FC = () => {
+
+    const logCode = () => { ReactGA.event({ category: 'Contribute', action: 'Code' }); }
+    const logChat = () => { ReactGA.event({ category: 'Contribute', action: 'Chat' }); }
+
     return (
         <div id="membersSection" className="homeSection alt">
             <Container>
@@ -17,8 +22,8 @@ export const GetStarted: React.FC = () => {
                     </Col>
                 </Row>
                 <Row>
-                    <Col><a href="https://github.com/LiveChurchSolutions/Docker" className="btn btn-primary btn-block btn-lg" >Start Coding</a></Col>
-                    <Col><a href="https://join.slack.com/t/livechurchsolutions/shared_invite/zt-i88etpo5-ZZhYsQwQLVclW12DKtVflg" className="btn btn-success btn-block btn-lg" >Let's Talk</a></Col>
+                    <Col><a href="https://github.com/LiveChurchSolutions/Docker" className="btn btn-primary btn-block btn-lg" onClick={logCode} target="_blank" rel="noopener noreferrer" >Start Coding</a></Col>
+                    <Col><a href="https://join.slack.com/t/livechurchsolutions/shared_invite/zt-i88etpo5-ZZhYsQwQLVclW12DKtVflg" className="btn btn-success btn-block btn-lg" onClick={logChat} target="_blank" rel="noopener noreferrer" >Let's Talk</a></Col>
                 </Row>
             </Container>
         </div>

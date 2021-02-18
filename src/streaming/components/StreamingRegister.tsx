@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { ApiHelper, RegisterInterface, RoleInterface, LoginResponseInterface, RolePermissionInterface, ErrorMessages, ChurchInterface, UserInterface, EnvironmentHelper } from ".";
-
+import ReactGA from "react-ga";
 
 export const StreamingRegister: React.FC = () => {
     const [email, setEmail] = React.useState("");
@@ -38,11 +38,11 @@ export const StreamingRegister: React.FC = () => {
             btn.innerHTML = "Registering. Please wait..."
             btn.setAttribute("disabled", "disabled");
 
+            ReactGA.event({ category: 'Streaming', action: 'Register' });
             var church: ChurchInterface = null;
 
             //Create Access
             church = await createAccess();
-            console.log(JSON.stringify(church));
             if (church != null) {
                 btn.innerHTML = "Configuring..."
                 var resp: LoginResponseInterface = await ApiHelper.post("/churches/init", { appName: "StreamingLive" }, "StreamingLiveApi");
