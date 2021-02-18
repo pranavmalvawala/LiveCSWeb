@@ -8,6 +8,7 @@ import { SolutionsPage } from "./solutions/SolutionsPage";
 import { PartnerPage } from "./partner/PartnerPage";
 import { ChumsLanding } from "./chums/ChumsLanding";
 import { StreamingLanding } from "./streaming/StreamingLanding";
+import { ContributePage } from "./contribute/ContributePage";
 
 export const Routing: React.FC = () => {
   const location = useLocation();
@@ -21,6 +22,7 @@ export const Routing: React.FC = () => {
     <Switch>
       <Route path="/solutions"><SolutionsPage /></Route>
       <Route path="/partner"><PartnerPage /></Route>
+      <Route path="/contribute"><ContributePage /></Route>
       <Route path="/chums"><ChumsLanding /></Route>
       <Route path="/streaming"><StreamingLanding /></Route>
       <Route path="/"><Home /></Route>

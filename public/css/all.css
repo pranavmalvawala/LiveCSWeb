@@ -53,9 +53,9 @@ h2 span {color:#24b8ff;}
 .homeSection .title span {color:#03a9f4;}
 
 .homeSection h2 {margin-bottom: 30px; font-size:36px; font-weight: bold; }
-.homeSection ul {padding-left:0px;}
-.homeSection li {list-style: none; background: url('/images/home/checkbox.png') 0px 3px no-repeat; padding:0px 0px 15px 37px;}
 
+.homeSection ul.checkList {padding-left:0px;}
+.homeSection .checkList li {list-style: none; background: url('/images/home/checkbox.png') 0px 3px no-repeat; padding:0px 0px 15px 37px;}
 
 
 .btn-light {color:#03a9f4;}
@@ -63,11 +63,11 @@ h2 span {color:#24b8ff;}
 p.lead {font-size:16px;font-weight: bold;}
 p.intro {font-size:17px;}
 
-
+/*
 .btn-primary, .bg-primary { background-color:#77cc00!important; border-color:#70db86!important; }
 .btn-primary:hover { background-color:#55aa00!important; border-color:#55aa00!important; }
 .btn-info, .bg-info { background-color: #03a9f4!important; border-color: #03a9f4!important; }
-
+*/
 
 
 
