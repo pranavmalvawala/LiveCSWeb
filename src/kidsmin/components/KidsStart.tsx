@@ -16,7 +16,7 @@ export const KidsStart = () => {
                     </Col>
                     <Col lg={4}>
                         <div className="text-center">
-                            <Button size="lg" variant="primary" href="https://calendly.com/micheallcs/15min?month=2021-02" >Schedule a Meeting</Button>
+                            <Button size="lg" variant="primary" href="https://calendly.com/micheallcs/15min" >Schedule a Meeting</Button>
                         </div>
                     </Col>
                 </Row>

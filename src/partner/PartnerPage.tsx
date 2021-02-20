@@ -1,11 +1,16 @@
 import React from "react";
 import { Footer, Header } from "../components"
-import { Container } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import { Donate } from "../components/Donate";
+import { Elements } from '@stripe/react-stripe-js';
+import { loadStripe } from '@stripe/stripe-js';
+const stripePromise = loadStripe('pk_live_Ny9Jk8nPW2lRf7NTjTg8QiBt00D4bjTh3y');
 
 export const PartnerPage = () => {
+
+
     return (
-        <>
+        <Elements stripe={stripePromise}>
             <Header />
             <Container>
                 <h1>Solutions</h1>
@@ -26,17 +31,27 @@ export const PartnerPage = () => {
             <div className="homeSection">
                 <Container>
                     <h2>Give to Live Church Solutions</h2>
-                    <p>At Live Church Solutions we strive to operate as efficiently as possible.  Our board and leadership volunteer their time without pay because they believe in the mission of using technology to reach people for Christ.  We also made the intentional decision not to charge for any of the services we offer so that price is never a barrier for any church needing help.  That doesn’t mean there aren’t real expenses involved in providing these services.</p>
-                    <p>By not just providing our solutions for free, but also hosting them for churches, we are able to remove the technical hurdles that would otherwise stand in the way of many smaller churches being able to use them.  However, this means we take on those hosting expenses.  Although much of the programming is done by volunteers, there are still some development expenses as well.  By supporting Live Church Solutions financially, you enable us to offer our services to more churches, so that they can more effectively serve the Kingdom.</p>
-                    <Donate />
-                    <p>
-                        If you prefer you may also send a check to:<br />
-                        Live Church Solutions<br />
-                        1300 Norwood Drive<br />
-                        Suite 100<br />
-                        Bedford, TX 76022<br />
-                        Tax ID: 45-5349618
-                    </p>
+
+                    <Row>
+                        <Col xl={8}>
+                            <p>At Live Church Solutions we strive to operate as efficiently as possible.  Our board and leadership volunteer their time without pay because they believe in the mission of using technology to reach people for Christ.  We also made the intentional decision not to charge for any of the services we offer so that price is never a barrier for any church needing help.  That doesn’t mean there aren’t real expenses involved in providing these services.</p>
+                            <p>By not just providing our solutions for free, but also hosting them for churches, we are able to remove the technical hurdles that would otherwise stand in the way of many smaller churches being able to use them.  However, this means we take on those hosting expenses.  Although much of the programming is done by volunteers, there are still some development expenses as well.  By supporting Live Church Solutions financially, you enable us to offer our services to more churches, so that they can more effectively serve the Kingdom.</p>
+                            <p>
+                                If you prefer you may also send a check to:<br />
+                                Live Church Solutions<br />
+                                1300 Norwood Drive<br />
+                                Suite 100<br />
+                                Bedford, TX 76022<br />
+                                Tax ID: 45-5349618
+                            </p>
+                        </Col>
+                        <Col xl={4}>
+                            <Donate />
+
+                        </Col>
+                    </Row>
+
+
                     <p>We also invite you to select Live Church Solutions as your designated charity on <a href="http://smile.amazon.com/ch/45-5349618">Amazon Smile</a>.</p>
                     <p>Live Church Solutions is a 501-C3 Tax Free Organization; All gifts are tax deductible. Tax ID: 45-5349618</p>
                 </Container>
@@ -50,6 +65,6 @@ export const PartnerPage = () => {
             </div>
 
             <Footer />
-        </>
+        </Elements>
     );
 }
