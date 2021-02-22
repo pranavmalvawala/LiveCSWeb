@@ -5,6 +5,7 @@ import { Switch, Route, useLocation } from "react-router-dom";
 import ReactGA from "react-ga";
 import { EnvironmentHelper } from "./helpers";
 import { SolutionsPage } from "./solutions/SolutionsPage";
+import { ThankYou } from "./partner/ThankYou";
 import { PartnerPage } from "./partner/PartnerPage";
 import { ChumsLanding } from "./chums/ChumsLanding";
 import { StreamingLanding } from "./streaming/StreamingLanding";
@@ -22,6 +23,7 @@ export const Routing: React.FC = () => {
   return (
     <Switch>
       <Route path="/solutions"><SolutionsPage /></Route>
+      <Route path="/thankyou"><ThankYou /></Route>
       <Route path="/partner"><PartnerPage /></Route>
       <Route path="/kidsmin"><KidsMinPage /></Route>
       <Route path="/contribute"><ContributePage /></Route>

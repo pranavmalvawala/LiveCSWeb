@@ -1,16 +1,14 @@
 import React from "react";
 import { Footer, Header } from "../components"
 import { Container, Row, Col } from "react-bootstrap";
-import { Donate } from "../components/Donate";
-import { Elements } from '@stripe/react-stripe-js';
-import { loadStripe } from '@stripe/stripe-js';
-const stripePromise = loadStripe('pk_live_Ny9Jk8nPW2lRf7NTjTg8QiBt00D4bjTh3y');
+import { DonateRedirect } from "../components/DonateRedirect";
+
 
 export const PartnerPage = () => {
 
 
     return (
-        <Elements stripe={stripePromise}>
+        <>
             <Header />
             <Container>
                 <h1>Solutions</h1>
@@ -46,7 +44,7 @@ export const PartnerPage = () => {
                             </p>
                         </Col>
                         <Col xl={4}>
-                            <Donate />
+                            <DonateRedirect />
 
                         </Col>
                     </Row>
@@ -65,6 +63,6 @@ export const PartnerPage = () => {
             </div>
 
             <Footer />
-        </Elements>
+        </>
     );
 }
