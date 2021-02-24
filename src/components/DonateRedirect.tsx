@@ -1,5 +1,5 @@
 import React from "react"
-import { FormGroup, FormControl, InputGroup } from "react-bootstrap";
+import { Row, Col, FormGroup, FormControl, InputGroup } from "react-bootstrap";
 import { InputBox, } from "../appBase/components";
 import { ApiHelper, EnvironmentHelper } from "../helpers";
 import { loadStripe } from '@stripe/stripe-js';
@@ -7,6 +7,13 @@ import { loadStripe } from '@stripe/stripe-js';
 
 export const DonateRedirect: React.FC = () => {
     const [amount, setAmount] = React.useState(25);
+
+    const [errors, setErrors] = React.useState<string[]>([]);
+    const [name, setName] = React.useState("");
+    const [address, setAddress] = React.useState("");
+    const [city, setCity] = React.useState("");
+    const [state, setState] = React.useState("");
+    const [zip, setZip] = React.useState("");
 
     const handleDonate = async () => {
         //const gateways = await ApiHelper.getAnonymous("/gateways", "GivingApi");
@@ -26,11 +33,13 @@ export const DonateRedirect: React.FC = () => {
         //}
     }
 
+
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         switch (e.target.name) {
             case "amount": setAmount(parseInt(e.target.value, 0)); break;
         }
     }
+
 
     return (
         <>

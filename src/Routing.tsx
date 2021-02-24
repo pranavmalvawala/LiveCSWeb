@@ -23,7 +23,7 @@ export const Routing: React.FC = () => {
   return (
     <Switch>
       <Route path="/solutions"><SolutionsPage /></Route>
-      <Route path="/thankyou"><ThankYou /></Route>
+      <Route path="/thankyou" component={ThankYou}></Route>
       <Route path="/partner"><PartnerPage /></Route>
       <Route path="/kidsmin"><KidsMinPage /></Route>
       <Route path="/contribute"><ContributePage /></Route>

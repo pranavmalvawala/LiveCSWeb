@@ -1,11 +1,9 @@
 import React from "react"
 import { useStripe, useElements, CardElement } from '@stripe/react-stripe-js';
-import { Row, Col, FormGroup, FormLabel, FormControl } from "react-bootstrap";
+import { Row, Col, FormGroup, FormLabel, FormControl, InputGroup } from "react-bootstrap";
 import { ErrorMessages, InputBox } from "../appBase/components";
 import { ApiHelper, EnvironmentHelper } from "../helpers";
-import { Elements } from '@stripe/react-stripe-js';
-import { loadStripe } from '@stripe/stripe-js';
-const stripePromise = loadStripe(EnvironmentHelper.StripePK);
+
 
 export const Donate: React.FC = () => {
 
@@ -17,19 +15,38 @@ export const Donate: React.FC = () => {
     const [zip, setZip] = React.useState("");
     const [amount, setAmount] = React.useState("");
 
-    const stripe = useStripe();
     //const elements = useElements();
+    const stripe = useStripe();
+    const elements = useElements();
 
     const handleDonate = async () => {
-        const data = {
-            churchId: "1",
-            successUrl: window.location.href,
-            cancelUrl: window.location.href,
-            amount: 50
+        if (!stripe || !elements) {
+            // Stripe.js has not loaded yet. Make sure to disable
+            // form submission until Stripe.js has loaded.
+            return;
         }
-        ApiHelper.postAnonymous("/donate/checkout", data, "GivingApi").then((resp: any) => {
-            stripe.redirectToCheckout({ sessionId: resp.sessionId });
+        const cardElement = elements.getElement(CardElement);
+        const { error, paymentMethod } = await stripe.createPaymentMethod({
+            type: 'card',
+            card: cardElement,
         });
+        if (error) {
+            console.log('[error]', error);
+        } else {
+            console.log('[PaymentMethod]', paymentMethod);
+        }
+
+        /*
+                const data = {
+                    churchId: EnvironmentHelper.ChurchId,
+                    successUrl: window.location.href,
+                    cancelUrl: window.location.href,
+                    amount: 50
+                }
+                ApiHelper.postAnonymous("/donate/checkout", data, "GivingApi").then((resp: any) => {
+                    stripe.redirectToCheckout({ sessionId: resp.sessionId });
+                });
+                */
         /*
         const cardElement = elements.getElement(CardElement);
         const { error, paymentMethod } = await stripe.createPaymentMethod({
@@ -56,7 +73,7 @@ export const Donate: React.FC = () => {
 
 
     return (
-        <Elements stripe={stripePromise}>
+        <>
             <ErrorMessages errors={errors} />
             <InputBox headerIcon="" headerText="Donate with Card" saveFunction={handleDonate} saveText="Donate" >
                 <FormGroup>
@@ -97,10 +114,14 @@ export const Donate: React.FC = () => {
                     </Col>
                 </Row>
                 <FormGroup>
-                    <FormControl name="amount" value={amount} onChange={handleChange} placeholder="Amount" type="number" min="5.00" step="0.01" />
+                    <InputGroup>
+                        <InputGroup.Prepend><InputGroup.Text>$</InputGroup.Text></InputGroup.Prepend>
+                        <FormControl name="amount" value={amount} onChange={handleChange} placeholder="Amount" type="number" min="5.00" step="1" />
+                        <InputGroup.Append><InputGroup.Text>.00</InputGroup.Text></InputGroup.Append>
+                    </InputGroup>
                 </FormGroup>
 
             </InputBox>
-        </Elements>
+        </>
     );
 }

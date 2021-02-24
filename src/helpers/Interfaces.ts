@@ -1,4 +1,4 @@
-export * from "../appBase/interfaces";
+export * from "../appBase/interfaces"
 
 export interface CampusInterface { id?: string, name?: string }
 export interface ContactInfoInterface { address1?: string, address2?: string, city?: string, state?: string, zip?: string, homePhone?: string, mobilePhone?: string, workPhone?: string, email?: string }
