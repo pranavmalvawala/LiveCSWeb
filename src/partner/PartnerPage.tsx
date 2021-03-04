@@ -1,7 +1,6 @@
 import React from "react";
 import { Footer, Header } from "../components"
 import { Container, Row, Col } from "react-bootstrap";
-import { DonateContainer } from "../components/DonateContainer";
 import { DonateRedirect } from "../components/DonateRedirect";
 
 
