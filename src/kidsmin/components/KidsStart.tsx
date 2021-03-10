@@ -1,5 +1,8 @@
 import React from "react";
 import { Container, Button, Row, Col } from "react-bootstrap";
+import ReactGA from "react-ga";
+
+const logSchedule = () => { ReactGA.event({ category: 'KidsMin', action: 'Schedule' }); }
 
 export const KidsStart = () => {
     return (
@@ -16,7 +19,7 @@ export const KidsStart = () => {
                     </Col>
                     <Col lg={4}>
                         <div className="text-center">
-                            <Button size="lg" variant="primary" href="https://calendly.com/micheallcs/15min" >Schedule a Meeting</Button>
+                            <Button size="lg" variant="primary" href="https://calendly.com/micheallcs/15min" onClick={logSchedule} target="_blank" >Schedule a Meeting</Button>
                         </div>
                     </Col>
                 </Row>

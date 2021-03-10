@@ -34,7 +34,7 @@
     "eject": "react-scripts eject",
     "predeploy-prod": "export REACT_APP_STAGE=prod&& npm run build",
     "exec-deploy-prod": "aws s3 sync build/ s3://livecs-web",
-    "postdeploy-prod": "aws cloudfront create-invalidation --distribution-id E18MZILEQOYXS9000000 --paths /*",
+    "postdeploy-prod": "aws cloudfront create-invalidation --distribution-id E18MZILEQOYXS9000000 --paths \"/*\"",
     "deploy-prod": "npm run predeploy-prod && npm run exec-deploy-prod && npm run postdeploy-prod"
   },
   "eslintConfig": {
