@@ -33,13 +33,12 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "lint:only": "eslint --ext ts,tsx",
+    "lint:fix": "npm run lint:only -- --fix",
     "predeploy-prod": "export REACT_APP_STAGE=prod&& npm run build",
     "exec-deploy-prod": "aws s3 sync build/ s3://livecs-web",
     "postdeploy-prod": "aws cloudfront create-invalidation --distribution-id ELZ9P6V35XSTD --paths \"/*\"",
     "deploy-prod": "npm run predeploy-prod && npm run exec-deploy-prod && npm run postdeploy-prod"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   },
   "browserslist": {
     "production": [
