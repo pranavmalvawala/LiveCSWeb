@@ -1,20 +1,18 @@
 import React from "react"
 import { Row, Container } from "react-bootstrap";
 
-export const Header: React.FC = () => {
-    return (<>
-        <div id="navbar" className="fixed-top">
-            <Container>
-                <Row>
-                    <div className="col-4"><a className="navbar-brand" href="/"><img src="/images/logo.png" alt="logo" /></a></div>
-                    <div className="col-8 text-right" id="navRight" >
-                        <a href="/" className="link">About Us</a>
-                        <a href="/solutions" className="link">Solutions</a>
-                        <a href="/partner" className="link">Partner</a>
-                    </div>
-                </Row>
-            </Container>
+export const Header: React.FC = () => (<>
+  <div id="navbar" className="fixed-top">
+    <Container>
+      <Row>
+        <div className="col-4"><a className="navbar-brand" href="/"><img src="/images/logo.png" alt="logo" /></a></div>
+        <div className="col-8 text-right" id="navRight">
+          <a href="/" className="link">About Us</a>
+          <a href="/solutions" className="link">Solutions</a>
+          <a href="/partner" className="link">Partner</a>
         </div>
-        <div id="navSpacer" ></div>
-    </>);
-}
+      </Row>
+    </Container>
+  </div>
+  <div id="navSpacer"></div>
+</>)

@@ -9,20 +9,18 @@ import { HomeExamples } from "./components/HomeExamples"
 import { HomeStats } from "./components/HomeStats"
 import { HomeWho } from "./components/HomeWho"
 
-export const Home = () => {
-    return (
-        <>
-            <HomeNav />
-            <HomeHero />
-            <HomeServices />
-            <HomeAbout />
-            <HomeExamples />
-            <HomeStats />
-            <HomeWho />
-            <Footer />
+export const Home = () => (
+  <>
+    <HomeNav />
+    <HomeHero />
+    <HomeServices />
+    <HomeAbout />
+    <HomeExamples />
+    <HomeStats />
+    <HomeWho />
+    <Footer />
 
-        </>
+  </>
 
-    );
-}
+)
 
