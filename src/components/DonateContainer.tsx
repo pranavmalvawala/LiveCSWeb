@@ -1,7 +1,6 @@
 import React from "react"
-import { FormGroup, FormControl, InputGroup } from "react-bootstrap";
 import { Donate } from "./Donate";
-import { ApiHelper, EnvironmentHelper } from "../helpers";
+import { EnvironmentHelper } from "../helpers";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 

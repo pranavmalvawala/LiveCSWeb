@@ -1,12 +1,9 @@
 import React from "react"
 import { useStripe, useElements, CardElement } from "@stripe/react-stripe-js";
-import { Row, Col, FormGroup, FormLabel, FormControl, InputGroup } from "react-bootstrap";
-import { ErrorMessages, InputBox } from "../appBase/components";
-import { ApiHelper, EnvironmentHelper } from "../helpers";
+import { Row, Col, FormGroup, FormControl, InputGroup } from "react-bootstrap";
+import { InputBox } from "../appBase/components";
 
 export const Donate: React.FC = () => {
-
-  const [errors, setErrors] = React.useState<string[]>([]);
   const [name, setName] = React.useState("");
   const [address, setAddress] = React.useState("");
   const [city, setCity] = React.useState("");
@@ -34,29 +31,6 @@ export const Donate: React.FC = () => {
     } else {
       console.log("[PaymentMethod]", paymentMethod);
     }
-
-    /*
-                const data = {
-                    churchId: EnvironmentHelper.ChurchId,
-                    successUrl: window.location.href,
-                    cancelUrl: window.location.href,
-                    amount: 50
-                }
-                ApiHelper.postAnonymous("/donate/checkout", data, "GivingApi").then((resp: any) => {
-                    stripe.redirectToCheckout({ sessionId: resp.sessionId });
-                });
-                */
-    /*
-        const cardElement = elements.getElement(CardElement);
-        const { error, paymentMethod } = await stripe.createPaymentMethod({
-            type: 'card',
-            card: cardElement,
-        });
-
-        if (error) setErrors([error.message]);
-        else {
-            console.log(paymentMethod);
-        }*/
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -72,7 +46,6 @@ export const Donate: React.FC = () => {
 
   return (
     <>
-      <ErrorMessages errors={errors} />
       <InputBox headerIcon="" headerText="Donate with Card" saveFunction={handleDonate} saveText="Donate">
         <FormGroup>
           <div className="form-control">
