@@ -11,20 +11,18 @@ import { ChumsAttendance } from "./components/ChumsAttendance";
 import { ChumsExport } from "./components/ChumsExport";
 import { ChumsTestimony } from "./components/ChumsTestimony";
 
-export const ChumsLanding = () => {
-    return (
-        <>
-            <Header />
-            <ChumsHero />
-            <ChumsAbout />
-            <ChumsFeatures />
-            <ChumsMembers />
-            <ChumsGiving />
-            <ChumsAttendance />
-            <ChumsExport />
-            <ChumsTestimony />
-            <ChumsRegister />
-            <Footer />
-        </>
-    );
-}
+export const ChumsLanding = () => (
+  <>
+    <Header />
+    <ChumsHero />
+    <ChumsAbout />
+    <ChumsFeatures />
+    <ChumsMembers />
+    <ChumsGiving />
+    <ChumsAttendance />
+    <ChumsExport />
+    <ChumsTestimony />
+    <ChumsRegister />
+    <Footer />
+  </>
+)

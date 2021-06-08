@@ -7,16 +7,14 @@ import { KidsAreas } from "./components/KidsAreas";
 import { KidsStart } from "./components/KidsStart";
 import { KidsFree } from "./components/KidsFree";
 
-export const KidsMinPage = () => {
-    return (
-        <>
-            <Header />
-            <KidsVideo />
-            <KidsOverview />
-            <KidsAreas />
-            <KidsFree />
-            <KidsStart />
-            <Footer />
-        </>
-    );
-}
+export const KidsMinPage = () => (
+  <>
+    <Header />
+    <KidsVideo />
+    <KidsOverview />
+    <KidsAreas />
+    <KidsFree />
+    <KidsStart />
+    <Footer />
+  </>
+)
