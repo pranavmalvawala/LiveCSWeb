@@ -13,10 +13,10 @@ export const StreamingRegister: React.FC = () => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const val = e.currentTarget.value;
     switch (e.currentTarget.name) {
-    case "email": setEmail(val); break;
-    case "password": setPassword(val); break;
-    case "churchName": setChurchName(val); break;
-    case "subDomain": setSubDomain(val); break;
+      case "email": setEmail(val); break;
+      case "password": setPassword(val); break;
+      case "churchName": setChurchName(val); break;
+      case "subDomain": setSubDomain(val); break;
     }
   }
 

@@ -32,7 +32,7 @@ export const GitHubIssues: React.FC<Props> = (props) => {
               repoName: item.repository_url.replace("https://api.github.com/repos/LiveChurchSolutions/", ""),
               title: item.title,
               url: item.html_url,
-              number: item.number,
+              number: item.number
             });
           });
         } catch {

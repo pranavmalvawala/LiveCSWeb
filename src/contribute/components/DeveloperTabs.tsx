@@ -26,13 +26,13 @@ export const DeveloperTabs: React.FC = () => {
   if (selectedTab === "" && defaultTab !== "") setSelectedTab(defaultTab);
 
   switch (selectedTab) {
-  case "node": currentTab = <TabNode />; break;
-  case "react": currentTab = <TabReact />; break;
-  case "brochure": currentTab = <TabBrochure />; break;
-  case "mobile": currentTab = <TabMobile />; break;
-  case "devops": currentTab = <TabDevOps />; break;
-  case "nontech": currentTab = <TabNonTech />; break;
-  default: currentTab = <div>Not implemented</div>; break;
+    case "node": currentTab = <TabNode />; break;
+    case "react": currentTab = <TabReact />; break;
+    case "brochure": currentTab = <TabBrochure />; break;
+    case "mobile": currentTab = <TabMobile />; break;
+    case "devops": currentTab = <TabDevOps />; break;
+    case "nontech": currentTab = <TabNonTech />; break;
+    default: currentTab = <div>Not implemented</div>; break;
   }
 
   return (<><ul className="nav nav-tabs">{tabs}</ul>{currentTab}</>);

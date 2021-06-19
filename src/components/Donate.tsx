@@ -24,7 +24,7 @@ export const Donate: React.FC = () => {
     const cardElement = elements.getElement(CardElement);
     const { error, paymentMethod } = await stripe.createPaymentMethod({
       type: "card",
-      card: cardElement,
+      card: cardElement
     });
     if (error) {
       console.log("[error]", error);
@@ -35,12 +35,12 @@ export const Donate: React.FC = () => {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     switch (e.target.name) {
-    case "name": setName(e.target.value); break;
-    case "address": setAddress(e.target.value); break;
-    case "city": setCity(e.target.value); break;
-    case "state": setState(e.target.value); break;
-    case "zip": setZip(e.target.value); break;
-    case "amount": setAmount(e.target.value); break;
+      case "name": setName(e.target.value); break;
+      case "address": setAddress(e.target.value); break;
+      case "city": setCity(e.target.value); break;
+      case "state": setState(e.target.value); break;
+      case "zip": setZip(e.target.value); break;
+      case "amount": setAmount(e.target.value); break;
     }
   }
 
@@ -53,8 +53,8 @@ export const Donate: React.FC = () => {
               options={{
                 style: {
                   base: { fontSize: "16px", color: "#424770", "::placeholder": { color: "#aab7c4" } },
-                  invalid: { color: "#9e2146" },
-                },
+                  invalid: { color: "#9e2146" }
+                }
               }}
             />
           </div>

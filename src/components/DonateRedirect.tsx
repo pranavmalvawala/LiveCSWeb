@@ -17,7 +17,7 @@ export const DonateRedirect: React.FC = () => {
       churchId: EnvironmentHelper.ChurchId,
       successUrl: window.location.origin.toString() + "/thankyou",
       cancelUrl: window.location.href,
-      amount: amount,
+      amount: amount
     }
     ApiHelper.postAnonymous("/donate/checkout", data, "GivingApi").then((resp: any) => {
       stripe.redirectToCheckout({ sessionId: resp.sessionId });
@@ -27,7 +27,7 @@ export const DonateRedirect: React.FC = () => {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     switch (e.target.name) {
-    case "amount": setAmount(parseInt(e.target.value, 0)); break;
+      case "amount": setAmount(parseInt(e.target.value, 0)); break;
     }
   }
 
