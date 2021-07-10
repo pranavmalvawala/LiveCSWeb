@@ -2,14 +2,13 @@ import React from "react";
 import { ApiHelper, RegisterInterface, LoginResponseInterface, ErrorMessages, EnvironmentHelper } from ".";
 import { Row, Col, Container, Button } from "react-bootstrap"
 import ReactGA from "react-ga";
+import { PersonInterface } from "../../helpers/Interfaces";
 
 export const ChumsRegister: React.FC = () => {
 
-  const [register, setRegister] = React.useState<RegisterInterface>({ churchName: "", displayName: "", password: "", email: "" });
+  const [register, setRegister] = React.useState<RegisterInterface>({ churchName: "", firstName: "", lastName: "", password: "", email: "" });
   const [processing, setProcessing] = React.useState(false);
-  const [firstName, setFirstName] = React.useState("");
-  const [lastName, setLastName] = React.useState("");
-  const [errors, setErrors] = React.useState<string[]>([]);
+  const [errors, setErrors] = React.useState([]);
   const [redirectUrl, setRedirectUrl] = React.useState("");
 
   const validateEmail = (email: string) => (/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(.\w{2,3})+$/.test(email))
@@ -17,8 +16,8 @@ export const ChumsRegister: React.FC = () => {
   const validate = () => {
     let errors: string[] = [];
     if (register.churchName === "") errors.push("Please enter your church name.")
-    if (firstName === "") errors.push("Please enter your first name.")
-    if (lastName === "") errors.push("Please enter your last name.")
+    if (register.firstName === "") errors.push("Please enter your first name.")
+    if (register.lastName === "") errors.push("Please enter your last name.")
     if (register.password === "") errors.push("Please enter a password.");
     else if (register.password.length < 6) errors.push("Passwords must be at least 6 characters.");
     if (register.email === "") errors.push("Please enter your email address.");
@@ -36,11 +35,23 @@ export const ChumsRegister: React.FC = () => {
       setProcessing(true);
       btn.innerHTML = "Registering. Please wait...";
       ReactGA.event({ category: "Chums", action: "Register" });
+      // check if user already exist and if so, return user's associated churches
+      const verifyResponse = await ApiHelper.postAnonymous("/users/verifyCredentials", {email: register.email, password: register.password}, "AccessApi");
+      if (verifyResponse.errors !== undefined || verifyResponse.churches !== undefined) {
+        const errorMessage = <>There is already an account with this email address, please <a href={EnvironmentHelper.AccountsAppUrl}>login</a> to manage your churches and apps. If you wish to create a new church with this email, please register from <a href={EnvironmentHelper.ChurchAppUrl}>ChurchApps</a></>;
+        setErrors([errorMessage]);
+
+        btn.innerHTML = "Register"
+        btn.removeAttribute("disabled");
+        setProcessing(false);
+        return;
+      }
       const loginResp = await createAccess();
       if (loginResp != null) {
         btn.innerHTML = "Configuring...";
+        const { person }: { person: PersonInterface} = await ApiHelper.post("/churches/init", { user: loginResp.user }, "MembershipApi");
         const promises: Promise<any>[] = [];
-        promises.push(ApiHelper.post("/churches/init", { user: loginResp.user }, "MembershipApi"));
+        promises.push(ApiHelper.post("/userchurch", { personId: person.id }, "AccessApi"));
         promises.push(ApiHelper.post("/churches/init", [], "AttendanceApi"));
         promises.push(ApiHelper.post("/churches/init", [], "GivingApi"));
         let responses = await Promise.all(promises);
@@ -60,8 +71,6 @@ export const ChumsRegister: React.FC = () => {
   }
 
   const createAccess = async () => {
-    register.displayName = firstName + " " + lastName;
-
     let resp: LoginResponseInterface = await ApiHelper.postAnonymous("/churches/register", register, "AccessApi");
     if (resp.errors !== undefined) { setErrors(resp.errors); return null; }
     else {
@@ -95,8 +104,8 @@ export const ChumsRegister: React.FC = () => {
     let r = { ...register };
     switch (e.currentTarget.name) {
       case "churchName": r.churchName = val; break;
-      case "firstName": setFirstName(val); break;
-      case "lastName": setLastName(val); break;
+      case "firstName": r.firstName = val; break;
+      case "lastName": r.lastName = val; break;
       case "email": r.email = val; break;
       case "password": r.password = val; break;
     }
@@ -123,10 +132,10 @@ export const ChumsRegister: React.FC = () => {
               </div>
 
               <div className="form-group">
-                <input type="text" className="form-control" placeholder="First Name" name="firstName" value={firstName} onChange={handleChange} />
+                <input type="text" className="form-control" placeholder="First Name" name="firstName" value={register.firstName} onChange={handleChange} />
               </div>
               <div className="form-group">
-                <input type="text" className="form-control" placeholder="Last Name" name="lastName" value={lastName} onChange={handleChange} />
+                <input type="text" className="form-control" placeholder="Last Name" name="lastName" value={register.lastName} onChange={handleChange} />
               </div>
 
               <div className="form-group">
