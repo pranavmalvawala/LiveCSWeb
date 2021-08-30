@@ -7,8 +7,6 @@ import { EnvironmentHelper } from "./helpers";
 import { SolutionsPage } from "./solutions/SolutionsPage";
 import { ThankYou } from "./partner/ThankYou";
 import { PartnerPage } from "./partner/PartnerPage";
-import { ChumsLanding } from "./chums/ChumsLanding";
-import { StreamingLanding } from "./streaming/StreamingLanding";
 import { ContributePage } from "./contribute/ContributePage";
 import { KidsMinPage } from "./kidsmin/KidsMinPage";
 
@@ -27,8 +25,6 @@ export const Routing: React.FC = () => {
       <Route path="/partner"><PartnerPage /></Route>
       <Route path="/kidsmin"><KidsMinPage /></Route>
       <Route path="/contribute"><ContributePage /></Route>
-      <Route path="/chums"><ChumsLanding /></Route>
-      <Route path="/streaming"><StreamingLanding /></Route>
       <Route path="/"><Home /></Route>
 
     </Switch>

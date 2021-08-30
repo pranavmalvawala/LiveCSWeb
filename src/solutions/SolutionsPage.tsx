@@ -22,7 +22,7 @@ export const SolutionsPage = () => (
           </Col>
           <Col lg={4}><img src="/images/solutions/chums.png" alt="CHUMS" className="img-fluid" /></Col>
         </Row>
-        <div className="text-center"><Button variant="success" style={{ paddingTop: 15, paddingBottom: 15, paddingLeft: 25, paddingRight: 25 }} href="/chums/">IMPROVE YOUR WORKFLOWS NOW</Button></div>
+        <div className="text-center"><Button variant="success" style={{ paddingTop: 15, paddingBottom: 15, paddingLeft: 25, paddingRight: 25 }} href="https://chums.org/">IMPROVE YOUR WORKFLOWS NOW</Button></div>
       </Container>
     </div>
 
@@ -37,7 +37,7 @@ export const SolutionsPage = () => (
           </Col>
           <Col lg={4}><img src="/images/solutions/streaminglive.png" alt="StreamingLive" className="img-fluid" /></Col>
         </Row>
-        <div className="text-center"><Button variant="success" style={{ paddingTop: 15, paddingBottom: 15, paddingLeft: 25, paddingRight: 25 }} href="/streaming/">START STREAMING TODAY</Button></div>
+        <div className="text-center"><Button variant="success" style={{ paddingTop: 15, paddingBottom: 15, paddingLeft: 25, paddingRight: 25 }} href="https://streaminglive.church/">START STREAMING TODAY</Button></div>
       </Container>
     </div>
 
