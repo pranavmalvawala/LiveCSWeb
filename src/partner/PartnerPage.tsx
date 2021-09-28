@@ -1,7 +1,7 @@
 import React from "react";
 import { Footer, Header } from "../components"
 import { Container, Row, Col } from "react-bootstrap";
-import { DonateRedirect } from "../components/DonateRedirect";
+import { DonateOnline } from "../components/DonateOnline";
 
 export const PartnerPage = () => (
   <>
@@ -9,7 +9,7 @@ export const PartnerPage = () => (
     <Container>
       <h1>Solutions</h1>
       <p className="intro">Thank you for considering partnering with Live Church Solutions. Live Church Solutions is a non-profit organization in the state of Oklahoma that relies on the donations of churches, individuals and organization to continue helping other churches. Your partnership helps us to continue helping other churches in need.</p>
-      <p className="intro">TThere are three key areas we really need your support.</p>
+      <p className="intro">There are three key areas we really need your support.</p>
       <br />
     </Container>
 
@@ -34,13 +34,13 @@ export const PartnerPage = () => (
             <p>Live Church Solutions is a 501-C3 Tax Free Organization; All gifts are tax deductible. Tax ID: 45-5349618</p>
           </Col>
           <Col xl={4}>
-            <DonateRedirect />
+            <DonateOnline />
             <div>
-                                If you prefer you may also send a check to:<br />
+              If you prefer you may also send a check to:<br />
               <div style={{ marginLeft: 20, fontStyle: "italic" }}>
-                                    Live Church Solutions<br />
-                                    1300 Norwood Drive, Suite 100<br />
-                                    Bedford, TX 76022<br />
+                Live Church Solutions<br />
+                1300 Norwood Drive, Suite 100<br />
+                Bedford, TX 76022<br />
               </div>
             </div>
 
