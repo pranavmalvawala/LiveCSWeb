@@ -43,20 +43,6 @@ export const SolutionsPage = () => (
 
     <div className="homeSection alt2">
       <Container>
-        <h2>Custom Websites</h2>
-        <Row>
-          <Col lg={8}>
-            <p>One of the first technical challenge many small churches face is the need for a basic website. First time guests need a place to easily obtain information about your church, your beliefs, and when and where you meet. Members need a place to stay informed about current programs and upcoming events.</p>
-            <p>We meet this need for churches by providing a turn-key website solution that is easily customizable and can grow with you. We provide any church with a free WordPress site with a choice of several church templates. This site is a starting point that you can fully customize to meet your needs. We host this site for you completely free of charge. Simply fill out the form and you can be online and begin customizing your site within a few minutes.</p>
-          </Col>
-          <Col lg={4}><img src="/images/solutions/websites.png" alt="Custom Websites" className="img-fluid" /></Col>
-        </Row>
-        <div className="text-center"><Button variant="success" style={{ paddingTop: 15, paddingBottom: 15, paddingLeft: 25, paddingRight: 25 }} href="https://yoursite.church/">GET ONLINE NOW</Button></div>
-      </Container>
-    </div>
-
-    <div className="homeSection">
-      <Container>
         <h2>Children’s Ministry Coaching</h2>
         <Row>
           <Col lg={8}>
@@ -69,7 +55,7 @@ export const SolutionsPage = () => (
       </Container>
     </div>
 
-    <div className="homeSection alt2">
+    <div className="homeSection">
       <Container>
         <h2>Technology Consulting</h2>
         <Row>

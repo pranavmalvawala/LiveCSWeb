@@ -22,10 +22,10 @@ export const HomeServices: React.FC = () => (
                   <a href="https://chums.org/" className="btn btn-primary">Learn More</a>
                 </Col>
                 <Col lg={4}>
-                  <div className="rounded-circle bg-warning"><i className="fab fa-wordpress-simple"></i></div>
-                  <h4>Free Websites</h4>
-                  <p>We offer a free WordPress website that has a simple theme to get you up and going, the theme is mobile friendly. Click get started to make your website in under 5 min.</p>
-                  <a href="/solutions" className="btn btn-warning" style={{ color: "#FFF" }}>Learn More</a>
+                  <div className="rounded-circle bg-warning"><i className="fas fa-book-reader"></i></div>
+                  <h4>Free Curriculum</h4>
+                  <p>Lessons.church provides free, high quality, video curriculum for both children and adults that anyone can easily download and customize in minutes.</p>
+                  <a href="https://lessons.church/" className="btn btn-warning" style={{ color: "#FFF" }}>Learn More</a>
                 </Col>
               </Row>
             </Card.Body>
