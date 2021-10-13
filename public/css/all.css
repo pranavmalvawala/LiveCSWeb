@@ -181,5 +181,6 @@ p.intro {font-size:17px;}
 
   @media (max-width: 767px) { 
     #homeNavbar a.link {font-size:14px;}
+    #navRight a.link {font-size:14px;}
     #navRight a { margin-left: 10px;}
   }
