@@ -179,3 +179,7 @@ p.intro {font-size:17px;}
     margin-right: 5px;
   }
 
+  @media (max-width: 767px) { 
+    #homeNavbar a.link {font-size:14px;}
+    #navRight a { margin-left: 10px;}
+  }
