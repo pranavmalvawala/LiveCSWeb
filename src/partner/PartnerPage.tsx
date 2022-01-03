@@ -24,10 +24,10 @@ export const PartnerPage = () => (
 
     <div className="homeSection">
       <Container>
-        <h2>Give to Live Church Solutions</h2>
 
         <Row>
           <Col xl={8}>
+            <h2>Give to Live Church Solutions</h2>
             <p>At Live Church Solutions we strive to operate as efficiently as possible.  Our board and leadership volunteer their time without pay because they believe in the mission of using technology to reach people for Christ.  We also made the intentional decision not to charge for any of the services we offer so that price is never a barrier for any church needing help.  That doesn’t mean there aren’t real expenses involved in providing these services.</p>
             <p>By not just providing our solutions for free, but also hosting them for churches, we are able to remove the technical hurdles that would otherwise stand in the way of many smaller churches being able to use them.  However, this means we take on those hosting expenses.  Although much of the programming is done by volunteers, there are still some development expenses as well.  By supporting Live Church Solutions financially, you enable us to offer our services to more churches, so that they can more effectively serve the Kingdom.</p>
             <p>We also invite you to select Live Church Solutions as your designated charity on <a href="http://smile.amazon.com/ch/45-5349618">Amazon Smile</a>.</p>
