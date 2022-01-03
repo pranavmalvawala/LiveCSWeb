@@ -20,7 +20,7 @@ export const ThankYou: React.FC = (props: any) => {
     else return (<p><a href={receiptUrl} target="_blank" rel="noreferrer noopener">View Receipt</a></p>);
   }
 
-  React.useEffect(logSession, []);
+  React.useEffect(logSession, []); //eslint-disable-line
 
   return (
     <>

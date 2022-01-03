@@ -1,7 +1,6 @@
 import React from "react";
-import "./App.css";
 import { Home } from "./Home";
-import { Switch, Route, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import ReactGA from "react-ga";
 import { EnvironmentHelper } from "./helpers";
 import { SolutionsPage } from "./solutions/SolutionsPage";
@@ -19,14 +18,13 @@ export const Routing: React.FC = () => {
   React.useEffect(() => { if (EnvironmentHelper.GoogleAnalyticsTag !== "") ReactGA.pageview(location.pathname + location.search); }, [location]);
 
   return (
-    <Switch>
-      <Route path="/solutions"><SolutionsPage /></Route>
-      <Route path="/thankyou" component={ThankYou}></Route>
-      <Route path="/partner"><PartnerPage /></Route>
-      <Route path="/kidsmin"><KidsMinPage /></Route>
-      <Route path="/contribute"><ContributePage /></Route>
-      <Route path="/"><Home /></Route>
-
-    </Switch>
+    <Routes>
+      <Route path="/solutions" element={<SolutionsPage />} />
+      <Route path="/thankyou" element={<ThankYou />} />
+      <Route path="/partner" element={<PartnerPage />} />
+      <Route path="/kidsmin" element={<KidsMinPage />} />
+      <Route path="/contribute" element={<ContributePage />} />
+      <Route path="/" element={<Home />} />
+    </Routes>
   );
 }
