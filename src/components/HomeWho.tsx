@@ -6,9 +6,7 @@ export const HomeWho: React.FC = () => (
     <Container>
 
       <h2>Who We Are</h2>
-      <p>
-                    Live Church Solutions is run entirely by volunteers with a passion for helping to spread the gospel of Christ. If you might be interested in volunteering, see our partnership page to learn how you can get involved.Live Church Solutions is run entirely by volunteers with a passion for helping to spread the gospel of Christ. If you might be interested in volunteering, see our <a href="/partnership/">partnership page</a> to learn how you can get involved.
-      </p>
+      <p>Live Church Solutions is run entirely by volunteers with a passion for helping to spread the gospel of Christ. If you might be interested in volunteering, see our <a href="/partner/">partnership page</a> to learn how you can get involved.</p>
       <Row>
         <Col>
           <Card>
