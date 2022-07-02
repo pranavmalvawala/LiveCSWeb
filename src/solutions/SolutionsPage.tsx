@@ -1,6 +1,7 @@
 import React from "react";
 import { Footer, Header } from "../components"
 import { Row, Col, Container, Button } from "react-bootstrap";
+import { FloatingSupport } from "../appBase/components";
 
 export const SolutionsPage = () => (
   <>
@@ -71,5 +72,6 @@ export const SolutionsPage = () => (
     </div>
 
     <Footer />
+    <FloatingSupport appName="LiveCS" />
   </>
 )

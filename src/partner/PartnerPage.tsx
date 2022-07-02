@@ -2,6 +2,7 @@ import React from "react";
 import { Footer, Header } from "../components"
 import { Container, Row, Col } from "react-bootstrap";
 import { DonateOnline } from "../components/DonateOnline";
+import { FloatingSupport } from "../appBase/components";
 
 export const PartnerPage = () => (
   <>
@@ -58,5 +59,6 @@ export const PartnerPage = () => (
     </div>
 
     <Footer />
+    <FloatingSupport appName="LiveCS" />
   </>
 )

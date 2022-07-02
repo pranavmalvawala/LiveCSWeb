@@ -8,6 +8,7 @@ import { HomeAbout } from "./components/HomeAbout"
 import { HomeExamples } from "./components/HomeExamples"
 import { HomeStats } from "./components/HomeStats"
 import { HomeWho } from "./components/HomeWho"
+import { FloatingSupport } from "./appBase/components";
 
 export const Home = () => (
   <>
@@ -19,6 +20,7 @@ export const Home = () => (
     <HomeStats />
     <HomeWho />
     <Footer />
+    <FloatingSupport appName="LiveCS" />
 
   </>
 
