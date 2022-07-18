@@ -8,8 +8,8 @@ export const HomeWho: React.FC = () => (
       <h2>Who We Are</h2>
       <p>Live Church Solutions is run entirely by volunteers with a passion for helping to spread the gospel of Christ. If you might be interested in volunteering, see our <a href="/partner/">partnership page</a> to learn how you can get involved.</p>
       <Row>
-        <Col xs={12} md={2}></Col>
-        <Col xs={12} md={4}>
+        <Col md={12} lg={2}></Col>
+        <Col md={12} lg={4}>
           <Card>
             <Card.Img variant="top" src="/images/home/byrd.jpg" />
             <Card.Body>
@@ -19,7 +19,7 @@ export const HomeWho: React.FC = () => (
           </Card>
         </Col>
 
-        <Col xs={12} md={4}>
+        <Col md={12} lg={4}>
           <Card>
             <Card.Img variant="top" src="/images/home/zongker.jpg" />
             <Card.Body>
@@ -28,7 +28,7 @@ export const HomeWho: React.FC = () => (
             </Card.Body>
           </Card>
         </Col>
-        <Col xs={12} md={2}></Col>
+        <Col md={12} lg={2}></Col>
       </Row>
     </Container>
   </div>
