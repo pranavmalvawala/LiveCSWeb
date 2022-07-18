@@ -8,7 +8,8 @@ export const HomeWho: React.FC = () => (
       <h2>Who We Are</h2>
       <p>Live Church Solutions is run entirely by volunteers with a passion for helping to spread the gospel of Christ. If you might be interested in volunteering, see our <a href="/partner/">partnership page</a> to learn how you can get involved.</p>
       <Row>
-        <Col>
+        <Col xs={12} md={2}></Col>
+        <Col xs={12} md={4}>
           <Card>
             <Card.Img variant="top" src="/images/home/byrd.jpg" />
             <Card.Body>
@@ -17,16 +18,8 @@ export const HomeWho: React.FC = () => (
             </Card.Body>
           </Card>
         </Col>
-        <Col>
-          <Card>
-            <Card.Img variant="top" src="/images/home/peterson.jpg" />
-            <Card.Body>
-              <Card.Title>Jeremy Peterson</Card.Title>
-              <p>Jeremy Peterson joined Manchester Christian Church in the summer of 2013 as the Executive Pastor overseeing staffing and operations. Jeremy has 20 years of ministry experience as a Pastor of Student Ministries and as a Campus Pastor at Compass Christian Church, a multisite church in Texas. He has a passion to help churches break through challenges they may face includingimplementing new systems, process, or best practices.</p>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col>
+
+        <Col xs={12} md={4}>
           <Card>
             <Card.Img variant="top" src="/images/home/zongker.jpg" />
             <Card.Body>
@@ -35,6 +28,7 @@ export const HomeWho: React.FC = () => (
             </Card.Body>
           </Card>
         </Col>
+        <Col xs={12} md={2}></Col>
       </Row>
     </Container>
   </div>
