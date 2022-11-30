@@ -1,7 +1,6 @@
 import { ApiHelper } from "../appBase/helpers"
 
 export class EnvironmentHelper {
-  private static AccessApi = "";
   private static AttendanceApi = "";
   private static GivingApi = "";
   private static MembershipApi = "";
@@ -23,7 +22,6 @@ export class EnvironmentHelper {
       default: EnvironmentHelper.initDev(); break;
     }
     ApiHelper.apiConfigs = [
-      { keyName: "AccessApi", url: EnvironmentHelper.AccessApi, jwt: "", permisssions: [] },
       { keyName: "AttendanceApi", url: EnvironmentHelper.AttendanceApi, jwt: "", permisssions: [] },
       { keyName: "GivingApi", url: EnvironmentHelper.GivingApi, jwt: "", permisssions: [] },
       { keyName: "MembershipApi", url: EnvironmentHelper.MembershipApi, jwt: "", permisssions: [] },
@@ -32,7 +30,6 @@ export class EnvironmentHelper {
   }
 
   static initDev = () => {
-    EnvironmentHelper.AccessApi = process.env.REACT_APP_ACCESS_API || "";
     EnvironmentHelper.AttendanceApi = process.env.REACT_APP_ATTENDANCE_API || "";
     EnvironmentHelper.GivingApi = process.env.REACT_APP_GIVING_API || "";
     EnvironmentHelper.MembershipApi = process.env.REACT_APP_MEMBERSHIP_API || "";
@@ -48,7 +45,6 @@ export class EnvironmentHelper {
 
   //NOTE: None of these values are secret.
   static initStaging = () => {
-    EnvironmentHelper.AccessApi = "https://accessapi.staging.churchapps.org";
     EnvironmentHelper.AttendanceApi = "https://attendanceapi.staging.churchapps.org";
     EnvironmentHelper.GivingApi = "https://givingapi.staging.churchapps.org";
     EnvironmentHelper.MembershipApi = "https://membershipapi.staging.churchapps.org";
@@ -65,7 +61,6 @@ export class EnvironmentHelper {
 
   //NOTE: None of these values are secret.
   static initProd = () => {
-    EnvironmentHelper.AccessApi = "https://accessapi.churchapps.org";
     EnvironmentHelper.AttendanceApi = "https://attendanceapi.churchapps.org";
     EnvironmentHelper.GivingApi = "https://givingapi.churchapps.org";
     EnvironmentHelper.MembershipApi = "https://membershipapi.churchapps.org";
