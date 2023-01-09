@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Footer, Header } from "../components"
 import { Container } from "react-bootstrap";
 import { ApiHelper, EnvironmentHelper } from "../helpers";
@@ -19,6 +19,10 @@ export const ThankYou: React.FC = (props: any) => {
     if (receiptUrl === "") return <></>;
     else return (<p><a href={receiptUrl} target="_blank" rel="noreferrer noopener">View Receipt</a></p>);
   }
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   React.useEffect(logSession, []); //eslint-disable-line
 

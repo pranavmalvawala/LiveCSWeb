@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Home.css";
 import { Footer } from "./components"
 import { HomeNav } from "./components/HomeNav"
@@ -10,19 +10,23 @@ import { HomeStats } from "./components/HomeStats"
 import { HomeWho } from "./components/HomeWho"
 import { FloatingSupport } from "./appBase/components";
 
-export const Home = () => (
-  <>
-    <HomeNav />
-    <HomeHero />
-    <HomeServices />
-    <HomeAbout />
-    <HomeExamples />
-    <HomeStats />
-    <HomeWho />
-    <Footer />
-    <FloatingSupport appName="LiveCS" />
+export const Home = () => {
 
-  </>
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
-)
-
+  return  (
+    <>
+      <HomeNav />
+      <HomeHero />
+      <HomeServices />
+      <HomeAbout />
+      <HomeExamples />
+      <HomeStats />
+      <HomeWho />
+      <Footer />
+      <FloatingSupport appName="LiveCS" />
+    </>
+  )
+}
